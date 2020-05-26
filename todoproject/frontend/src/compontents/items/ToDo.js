@@ -7,6 +7,10 @@ export class ToDo extends Component {
     static propTypes = {
         todo: PropTypes.array.isRequired
     }
+
+    componentDidMount() {
+        this.props.getToDo();
+    }
     render() {
         return (
             <div>
@@ -19,4 +23,4 @@ const mapStateToProps = state => ({
     todo: state.todo.todo
 })
 
-export default connect(mapStateToProps)(ToDo);
+export default connect(mapStateToProps, { getToDo })(ToDo);
