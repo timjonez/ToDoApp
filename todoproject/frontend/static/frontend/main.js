@@ -997,11 +997,11 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /*!***************************************************!*\
   !*** ./todoproject/frontend/src/actions/types.js ***!
   \***************************************************/
-/*! exports provided: GET_TODO */
+/*! exports provided: GET_TODO, DELETE_TODO */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"GET_TODO\", function() { return GET_TODO; });\nvar GET_TODO = 'GET_TODO';\n\n//# sourceURL=webpack:///./todoproject/frontend/src/actions/types.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"GET_TODO\", function() { return GET_TODO; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"DELETE_TODO\", function() { return DELETE_TODO; });\nvar GET_TODO = 'GET_TODO';\nvar DELETE_TODO = 'DELETE_TODO';\n\n//# sourceURL=webpack:///./todoproject/frontend/src/actions/types.js?");
 
 /***/ }),
 
