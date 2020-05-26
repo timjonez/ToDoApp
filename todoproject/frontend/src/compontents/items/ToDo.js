@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { getToDo } from '../../actions/todo'
+import { getToDo, deleteToDo } from '../../actions/todo'
 
 export class ToDo extends Component {
     static propTypes = {
@@ -31,7 +31,10 @@ export class ToDo extends Component {
                                 <td>{todo.body}</td>
                                 <td>{todo.due_date}</td>
                                 <td>
-                                    <button className='btn btn-danger btn-sm'>Check off</button>
+                                    <button
+                                        className='btn btn-danger btn-sm'
+                                        onClick={this.props.deleteToDo.bind(this, todo.id)}
+                                    >Check off</button>
                                 </td>
                             </tr>
                         ))}
@@ -45,4 +48,4 @@ const mapStateToProps = state => ({
     todo: state.todo.todo
 })
 
-export default connect(mapStateToProps, { getToDo })(ToDo);
+export default connect(mapStateToProps, { getToDo, deleteToDo })(ToDo);
