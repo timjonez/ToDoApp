@@ -15,7 +15,7 @@ export const getToDo = () => dispatch => {
 }
 
 export const deleteToDo = (id) => dispatch => {
-    axios.get(`api/items/${id}`)
+    axios.delete(`api/items/${id}`)
         .then(res => {
             dispatch({
                 type: DELETE_TODO,
