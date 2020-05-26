@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { getToDo } from '../../actions/todo'
@@ -13,9 +13,31 @@ export class ToDo extends Component {
     }
     render() {
         return (
-            <div>
-                <h1>This is the todo items comp</h1>
-            </div>
+            <Fragment>
+                <h1>My To Do</h1>
+                <table className='table table-striped'>
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>To Do</th>
+                            <th>Due on</th>
+                            <th>Created on</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {this.props.todo.map(todo => (
+                            <tr key={todo.id}>
+                                <td>{todo.title}</td>
+                                <td>{todo.body}</td>
+                                <td>{todo.due_date}</td>
+                                <td>
+                                    <button className='btn btn-danger btn-sm'>Check off</button>
+                                </td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+            </Fragment>
         )
     }
 }
