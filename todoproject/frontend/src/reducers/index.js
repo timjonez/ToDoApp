@@ -1,3 +1,6 @@
 import { combineReducers } from "redux";
+import ToDo from './todo';
 
-export default combineReducers({});
+export default combineReducers({
+    ToDo,
+});
