@@ -4,7 +4,7 @@ import { GET_TODO } from './types';
 
 
 export const getToDo = () => dispatch => {
-    axios.get('/api/itemsl/')
+    axios.get('api/items/')
         .then(res => {
             dispatch({
                 type: GET_TODO,
