@@ -1,6 +1,12 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { getToDo } from '../../actions/todo'
 
 export class ToDo extends Component {
+    static propTypes = {
+        todo: PropTypes.array.isRequired
+    }
     render() {
         return (
             <div>
@@ -9,5 +15,8 @@ export class ToDo extends Component {
         )
     }
 }
+const mapStateToProps = state => ({
+    todo: state.todo.todo
+})
 
-export default ToDo
+export default connect(mapStateToProps)(ToDo);
