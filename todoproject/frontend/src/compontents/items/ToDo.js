@@ -5,7 +5,9 @@ import { getToDo, deleteToDo } from '../../actions/todo'
 
 export class ToDo extends Component {
     static propTypes = {
-        todo: PropTypes.array.isRequired
+        todo: PropTypes.array.isRequired,
+        getToDo: PropTypes.func.isRequired,
+        deleteToDo: PropTypes.func.isRequired
     }
 
     componentDidMount() {
@@ -27,6 +29,7 @@ export class ToDo extends Component {
                     <tbody>
                         {this.props.todo.map(todo => (
                             <tr key={todo.id}>
+                                <td>{todo.key}</td>
                                 <td>{todo.title}</td>
                                 <td>{todo.body}</td>
                                 <td>{todo.due_date}</td>
