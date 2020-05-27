@@ -39,7 +39,8 @@ export const addToDo = (item) => dispatch => {
                 status: err.response.status
             }
             dispatch({
-                type: GET_ERRORS
+                type: GET_ERRORS,
+                payload: errors
             })
         });
 }
