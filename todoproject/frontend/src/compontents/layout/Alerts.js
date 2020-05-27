@@ -3,6 +3,7 @@ import { withAlert } from 'react-alert';
 
 export class Alerts extends Component {
     componentDidMount() {
+        this.props.alert.show('this works');
     }
 
     render() {
@@ -10,4 +11,4 @@ export class Alerts extends Component {
     }
 }
 
-export default withAlert(Alerts);
+export default withAlert()(Alerts);

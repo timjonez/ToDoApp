@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 
 import Header from './layout/Header';
 import Dashboard from './items/Dashboard';
+import Alerts from './layout/Alerts';
 
 import { Provider as AlertProvider } from 'react-alert';
 import AlertTemplate from 'react-alert-template-basic';
@@ -22,6 +23,7 @@ class App extends Component {
                 <AlertProvider template={AlertTemplate} {...alertOptions}>
                     <Fragment>
                         <Header />
+                        <Alerts />
                         <div className='container'>
                             <Dashboard />
                         </div>
