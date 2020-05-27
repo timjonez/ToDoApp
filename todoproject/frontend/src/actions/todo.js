@@ -18,7 +18,7 @@ export const getToDo = () => dispatch => {
 export const deleteToDo = (id) => dispatch => {
     axios.delete(`api/items/${id}`)
         .then(res => {
-            dispatch(createMessage({ deleteToDo: 'Lead Added' }));
+            dispatch(createMessage({ deleteToDo: 'To Do Deleted' }));
             dispatch({
                 type: DELETE_TODO,
                 payload: id
