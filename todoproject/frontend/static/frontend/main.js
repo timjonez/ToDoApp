@@ -1201,11 +1201,11 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /*!***************************************************!*\
   !*** ./todoproject/frontend/src/actions/types.js ***!
   \***************************************************/
-/*! exports provided: GET_TODO, DELETE_TODO, ADD_TODO, GET_ERRORS */
+/*! exports provided: GET_TODO, DELETE_TODO, ADD_TODO, GET_ERRORS, GET_MESSAGES, CREATE_MESSAGES */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"GET_TODO\", function() { return GET_TODO; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"DELETE_TODO\", function() { return DELETE_TODO; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"ADD_TODO\", function() { return ADD_TODO; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"GET_ERRORS\", function() { return GET_ERRORS; });\nvar GET_TODO = 'GET_TODO';\nvar DELETE_TODO = 'DELETE_TODO';\nvar ADD_TODO = 'ADD_TODO';\nvar GET_ERRORS = 'GET_ERRORS';\n\n//# sourceURL=webpack:///./todoproject/frontend/src/actions/types.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"GET_TODO\", function() { return GET_TODO; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"DELETE_TODO\", function() { return DELETE_TODO; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"ADD_TODO\", function() { return ADD_TODO; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"GET_ERRORS\", function() { return GET_ERRORS; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"GET_MESSAGES\", function() { return GET_MESSAGES; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"CREATE_MESSAGES\", function() { return CREATE_MESSAGES; });\nvar GET_TODO = 'GET_TODO';\nvar DELETE_TODO = 'DELETE_TODO';\nvar ADD_TODO = 'ADD_TODO';\nvar GET_ERRORS = 'GET_ERRORS';\nvar GET_MESSAGES = 'GET_MESSAGES';\nvar CREATE_MESSAGES = 'CREATE_MESSAGES';\n\n//# sourceURL=webpack:///./todoproject/frontend/src/actions/types.js?");
 
 /***/ }),
 
