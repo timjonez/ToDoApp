@@ -9,6 +9,11 @@ export class Form extends Component {
 
     onChange = e => this.setState({ [e.target.name]: e.target.value });
 
+    onSubmit = e => {
+        e.preventDefault();
+        console.log('submit')
+    }
+
     render() {
         const { title, body, due_date } = this.state;
         return (
@@ -38,6 +43,11 @@ export class Form extends Component {
                             type='datetime-local'
                             onChange={this.onChange}
                             value={due_date} />
+                    </div>
+                    <div className='form-group'>
+                        <button type='submit' className='btn btn-primary'>
+                            Add
+                        </button>
                     </div>
                 </form>
             </div>
