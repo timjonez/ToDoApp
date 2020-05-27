@@ -7,7 +7,6 @@ import { GET_TODO, DELETE_TODO, ADD_TODO, GET_ERRORS } from './types';
 export const getToDo = () => dispatch => {
     axios.get('api/items/')
         .then(res => {
-            dispatch({ addToDo: "To Do Added" })
             dispatch({
                 type: GET_TODO,
                 payload: res.data
@@ -31,6 +30,7 @@ export const deleteToDo = (id) => dispatch => {
 export const addToDo = (item) => dispatch => {
     axios.post('api/items/', item)
         .then(res => {
+            dispatch(createMessage({ addToDo: 'To Do Added' }))
             dispatch({
                 type: ADD_TODO,
                 payload: res.data
