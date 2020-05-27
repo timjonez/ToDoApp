@@ -7,7 +7,7 @@ export default function (state = initialState, action) {
         case GET_MESSAGES:
             return action.payload;
         case CREATE_MESSAGE:
-            return (state = action.pay);
+            return (state = action.payload);
         default: return state;
     }
 }
