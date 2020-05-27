@@ -7,6 +7,7 @@ import { GET_TODO, DELETE_TODO, ADD_TODO, GET_ERRORS } from './types';
 export const getToDo = () => dispatch => {
     axios.get('api/items/')
         .then(res => {
+            dispatch({ addToDo: "To Do Added" })
             dispatch({
                 type: GET_TODO,
                 payload: res.data
