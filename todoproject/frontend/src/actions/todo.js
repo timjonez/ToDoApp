@@ -24,3 +24,14 @@ export const deleteToDo = (id) => dispatch => {
         })
         .catch(err => console.log(err));
 }
+
+export const addToDo = (item) => dispatch => {
+    axios.post('api/items/', item)
+        .then(res => {
+            dispatch({
+                type: ADD_TODO,
+                payload: res.data
+            });
+        })
+        .catch(err => console.log(err));
+}
