@@ -2,9 +2,9 @@ import React, { Component } from 'react'
 
 export class Form extends Component {
     state = {
-        title: '',
-        body: '',
-        due_date: ''
+        title: "",
+        body: "",
+        due_date: ""
     };
 
     onChange = e => this.setState({ [e.target.name]: e.target.value });
@@ -25,6 +25,7 @@ export class Form extends Component {
                         <input
                             className='form-control'
                             type='text'
+                            name='title'
                             onChange={this.onChange}
                             value={title} />
                     </div>
@@ -33,6 +34,7 @@ export class Form extends Component {
                         <input
                             className='form-control'
                             type='text'
+                            name='body'
                             onChange={this.onChange}
                             value={body} />
                     </div>
@@ -41,6 +43,7 @@ export class Form extends Component {
                         <input
                             className='form-control'
                             type='datetime-local'
+                            name='due_date'
                             onChange={this.onChange}
                             value={due_date} />
                     </div>
