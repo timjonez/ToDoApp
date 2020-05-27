@@ -29,7 +29,7 @@ export class ToDo extends Component {
                     <tbody>
                         {this.props.todo.map(todo => (
                             <tr key={todo.id}>
-                                <td>{todo.key}</td>
+                                <td>{todo.id}</td>
                                 <td>{todo.title}</td>
                                 <td>{todo.body}</td>
                                 <td>{todo.due_date}</td>
