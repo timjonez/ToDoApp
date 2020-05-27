@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { createMessage } from './messages';
 
 import { GET_TODO, DELETE_TODO, ADD_TODO, GET_ERRORS } from './types';
 
@@ -17,6 +18,7 @@ export const getToDo = () => dispatch => {
 export const deleteToDo = (id) => dispatch => {
     axios.delete(`api/items/${id}`)
         .then(res => {
+            dispatch(createMessage({ todoAdded: 'Lead Added' }));
             dispatch({
                 type: DELETE_TODO,
                 payload: id
