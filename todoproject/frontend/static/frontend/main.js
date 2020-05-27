@@ -1193,7 +1193,7 @@ eval("module.exports = function(originalModule) {\n\tif (!originalModule.webpack
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"createMessage\", function() { return createMessage; });\n/* harmony import */ var _types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./types */ \"./todoproject/frontend/src/actions/types.js\");\n\nvar createMessage = function createMessage(msg) {\n  return {\n    type: _types__WEBPACK_IMPORTED_MODULE_0__[\"CREATE_MESSAGES\"],\n    payload: msg\n  };\n};\n\n//# sourceURL=webpack:///./todoproject/frontend/src/actions/messages.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"createMessage\", function() { return createMessage; });\n/* harmony import */ var _types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./types */ \"./todoproject/frontend/src/actions/types.js\");\n\nvar createMessage = function createMessage(msg) {\n  return {\n    type: _types__WEBPACK_IMPORTED_MODULE_0__[\"CREATE_MESSAGE\"],\n    payload: msg\n  };\n};\n\n//# sourceURL=webpack:///./todoproject/frontend/src/actions/messages.js?");
 
 /***/ }),
 
@@ -1213,11 +1213,11 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /*!***************************************************!*\
   !*** ./todoproject/frontend/src/actions/types.js ***!
   \***************************************************/
-/*! exports provided: GET_TODO, DELETE_TODO, ADD_TODO, GET_ERRORS, GET_MESSAGES, CREATE_MESSAGES */
+/*! exports provided: GET_TODO, DELETE_TODO, ADD_TODO, GET_ERRORS, GET_MESSAGES, CREATE_MESSAGE */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"GET_TODO\", function() { return GET_TODO; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"DELETE_TODO\", function() { return DELETE_TODO; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"ADD_TODO\", function() { return ADD_TODO; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"GET_ERRORS\", function() { return GET_ERRORS; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"GET_MESSAGES\", function() { return GET_MESSAGES; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"CREATE_MESSAGES\", function() { return CREATE_MESSAGES; });\nvar GET_TODO = 'GET_TODO';\nvar DELETE_TODO = 'DELETE_TODO';\nvar ADD_TODO = 'ADD_TODO';\nvar GET_ERRORS = 'GET_ERRORS';\nvar GET_MESSAGES = 'GET_MESSAGES';\nvar CREATE_MESSAGES = 'CREATE_MESSAGES';\n\n//# sourceURL=webpack:///./todoproject/frontend/src/actions/types.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"GET_TODO\", function() { return GET_TODO; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"DELETE_TODO\", function() { return DELETE_TODO; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"ADD_TODO\", function() { return ADD_TODO; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"GET_ERRORS\", function() { return GET_ERRORS; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"GET_MESSAGES\", function() { return GET_MESSAGES; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"CREATE_MESSAGE\", function() { return CREATE_MESSAGE; });\nvar GET_TODO = 'GET_TODO';\nvar DELETE_TODO = 'DELETE_TODO';\nvar ADD_TODO = 'ADD_TODO';\nvar GET_ERRORS = 'GET_ERRORS';\nvar GET_MESSAGES = 'GET_MESSAGES';\nvar CREATE_MESSAGE = 'CREATE_MESSAGE';\n\n//# sourceURL=webpack:///./todoproject/frontend/src/actions/types.js?");
 
 /***/ }),
 
@@ -1337,7 +1337,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var redu
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _actions_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/types */ \"./todoproject/frontend/src/actions/types.js\");\n\nvar initialState = {};\n/* harmony default export */ __webpack_exports__[\"default\"] = (function () {\n  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;\n  var action = arguments.length > 1 ? arguments[1] : undefined;\n\n  switch (action.type) {\n    case _actions_types__WEBPACK_IMPORTED_MODULE_0__[\"GET_MESSAGES\"]:\n      return action.payload;\n\n    case _actions_types__WEBPACK_IMPORTED_MODULE_0__[\"CREATE_MESSAGES\"]:\n      return state = action.pay;\n\n    default:\n      return state;\n  }\n});\n\n//# sourceURL=webpack:///./todoproject/frontend/src/reducers/messages.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _actions_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/types */ \"./todoproject/frontend/src/actions/types.js\");\n\nvar initialState = {};\n/* harmony default export */ __webpack_exports__[\"default\"] = (function () {\n  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;\n  var action = arguments.length > 1 ? arguments[1] : undefined;\n\n  switch (action.type) {\n    case _actions_types__WEBPACK_IMPORTED_MODULE_0__[\"GET_MESSAGES\"]:\n      return action.payload;\n\n    case _actions_types__WEBPACK_IMPORTED_MODULE_0__[\"CREATE_MESSAGE\"]:\n      return state = action.pay;\n\n    default:\n      return state;\n  }\n});\n\n//# sourceURL=webpack:///./todoproject/frontend/src/reducers/messages.js?");
 
 /***/ }),
 

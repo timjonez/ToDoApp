@@ -1,8 +1,8 @@
-import { CREATE_MESSAGES } from './types';
+import { CREATE_MESSAGE } from './types';
 
 export const createMessage = msg => {
     return {
-        type: CREATE_MESSAGES,
+        type: CREATE_MESSAGE,
         payload: msg
     }
 }
