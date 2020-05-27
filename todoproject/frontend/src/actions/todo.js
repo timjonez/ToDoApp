@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import { GET_TODO, DELETE_TODO } from './types';
+import { GET_TODO, DELETE_TODO, ADD_TODO } from './types';
 
 
 export const getToDo = () => dispatch => {

@@ -1,4 +1,7 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { addToDo } from '../../actions/todo';
 
 export class Form extends Component {
     state = {
@@ -7,11 +10,17 @@ export class Form extends Component {
         due_date: ""
     };
 
+    static propTypes = {
+        addToDo: PropTypes.func.isRequired
+    }
+
     onChange = e => this.setState({ [e.target.name]: e.target.value });
 
     onSubmit = e => {
         e.preventDefault();
-        console.log('submit')
+        const { title, body, due_date } = this.state;
+        const item = { title, body, due_date };
+        this.props.addToDo(item);
     }
 
     render() {
@@ -58,4 +67,4 @@ export class Form extends Component {
     }
 }
 
-export default Form
+export default connect(null, { addToDo })(Form);
