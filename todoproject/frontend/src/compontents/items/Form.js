@@ -23,6 +23,11 @@ export class Form extends Component {
         const { title, body, due_date } = this.state;
         const item = { title, body, due_date };
         this.props.addToDo(item);
+        this.setState({
+            title: "",
+            body: "",
+            due_date: "",
+        })
     }
 
     render() {
