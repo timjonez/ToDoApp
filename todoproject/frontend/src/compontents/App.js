@@ -31,6 +31,8 @@ class App extends Component {
                             <div className='container'>
                                 <Switch>
                                     <Route exact path='/' component={Dashboard} />
+                                    <Route exact path='/login' component={Login} />
+                                    <Route exact path='/register' component={Register} />
                                 </Switch>
                             </div>
                         </Fragment>
