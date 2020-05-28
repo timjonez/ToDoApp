@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { returnErrors } from './messages';
 
-import { USER_LOADED, USER_LOADED, AUTH_ERROR, USER_LOADING } from './types';
+import { USER_LOADING, USER_LOADED, AUTH_ERROR } from './types';
 
 export const loadUser = () => (dispatch, getState) => {
     dispatch({ type: USER_LOADING });
