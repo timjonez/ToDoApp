@@ -32,7 +32,7 @@ export const login = (username, password) => dispatch => {
 
     const body = JSON.stringify({ username, password });
 
-    axios.post('/api/auth/user', body, config)
+    axios.post('/api/auth/login', body, config)
         .then(res => {
             dispatch({
                 type: LOGIN_SUCCESS,
