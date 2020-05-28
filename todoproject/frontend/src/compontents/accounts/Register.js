@@ -17,7 +17,7 @@ export class Register extends Component {
     onChange = e => this.setState({ [e.target.name]: e.target.value });
 
     render() {
-        const = { username, email, password, password2 } = this.state
+        const { username, email, password, password2 } = this.state
         return (
             <div className='col-md-6 m-auto'>
                 <div className='card card-body mt-5'>
