@@ -1,11 +1,12 @@
 import axios from 'axios';
 import { createMessage, returnErrors } from './messages';
+import { tokenConfig } from './auth';
 
 import { GET_TODO, DELETE_TODO, ADD_TODO, GET_ERRORS } from './types';
 
 
-export const getToDo = () => dispatch => {
-    axios.get('api/items/')
+export const getToDo = () => (dispatch, getState) => {
+    axios.get('api/items/', tokenConfig(getState))
         .then(res => {
             dispatch({
                 type: GET_TODO,
@@ -15,8 +16,8 @@ export const getToDo = () => dispatch => {
         .catch(err => dispatch(returnErrors(err.response.data, err.response.status)))
 }
 
-export const deleteToDo = (id) => dispatch => {
-    axios.delete(`api/items/${id}`)
+export const deleteToDo = (id) => (dispatch, getState) => {
+    axios.delete(`api/items/${id}`, tokenConfig(getState))
         .then(res => {
             dispatch(createMessage({ deleteToDo: 'To Do Deleted' }));
             dispatch({
@@ -27,8 +28,8 @@ export const deleteToDo = (id) => dispatch => {
         .catch(err => dispatch(returnErrors(err.response.data, err.response.status)))
 }
 
-export const addToDo = (item) => dispatch => {
-    axios.post('api/items/', item)
+export const addToDo = (item) => (dispatch, getState) => {
+    axios.post('api/items/', item, tokenConfig(getState))
         .then(res => {
             dispatch(createMessage({ addToDo: 'To Do Added' }))
             dispatch({
