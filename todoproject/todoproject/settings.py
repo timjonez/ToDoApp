@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'todo_items',
     'rest_framework',
     'frontend',
-    'knox'
+    'knox',
+    'accounts',
 ]
 
 REST_FRAMEWORK = {
