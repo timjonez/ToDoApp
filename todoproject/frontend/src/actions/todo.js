@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { createMessage } from './messages';
+import { createMessage, returnErrors } from './messages';
 
 import { GET_TODO, DELETE_TODO, ADD_TODO, GET_ERRORS } from './types';
 
@@ -12,7 +12,7 @@ export const getToDo = () => dispatch => {
                 payload: res.data
             });
         })
-        .catch(err => console.log(err));
+        .catch(err => dispatch(returnErrors(err.response.data, err.response.status)))
 }
 
 export const deleteToDo = (id) => dispatch => {
@@ -24,7 +24,7 @@ export const deleteToDo = (id) => dispatch => {
                 payload: id
             });
         })
-        .catch(err => console.log(err));
+        .catch(err => dispatch(returnErrors(err.response.data, err.response.status)))
 }
 
 export const addToDo = (item) => dispatch => {
@@ -36,14 +36,5 @@ export const addToDo = (item) => dispatch => {
                 payload: res.data
             });
         })
-        .catch(err => {
-            const errors = {
-                msg: err.response.data,
-                status: err.response.status
-            }
-            dispatch({
-                type: GET_ERRORS,
-                payload: errors
-            })
-        });
+        .catch(err => dispatch(returnErrors(err.response.data, err.response.status)))
 }
