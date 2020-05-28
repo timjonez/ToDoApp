@@ -3,7 +3,7 @@ from rest_framework import viewsets, permissions
 from .serializers import ItemSerializer
 
 class ItemViewSet(viewsets.ModelViewSet):
-    permission_classes = [permissions.isAuthenticated]
+    permission_classes = [permissions.IsAuthenticated]
     serializer_class = ItemSerializer
 
     def get_queryset(self):
