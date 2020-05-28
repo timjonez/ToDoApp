@@ -18,6 +18,7 @@ export class Alerts extends Component {
             if (error.msg.body) alert.error(`Body: ${error.msg.body.join()}`);
             if (error.msg.due_date) alert.error(`Body: ${error.msg.due_date.join()}`);
             if (error.msg.non_field_errors) alert.error(error.msg.non_field_errors.join());
+            if (error.msg.username) alert.error(`Body: ${error.msg.username.join()}`);
         }
 
         if (message !== prevProps.message) {
